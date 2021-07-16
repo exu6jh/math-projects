@@ -1,12 +1,15 @@
 clear;
 clc;
 
-val = 1;
+isVPI = 0;
+
+val = 155;
 sums = {};
 
 a_n = val;
 diff = 1;
 a_next = a_n;
+
 col = 1;
 while(true)
     flag = true;

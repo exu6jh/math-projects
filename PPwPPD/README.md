@@ -2,7 +2,7 @@
 
 Area: number theory
 
-Define the function a(k,0) = k and a(k,n+1) as being the lowest perfect power (i.e. n expressible as m^k where m >= 1, k > 1) such that a(k,n+1) - a(k,n) is also a perfect power, or 0 if no such perfect power exists.
+Define the function a(k,0) = k and a(k,n+1) as being the lowest perfect power (i.e. number expressible as m^b where m >= 1, b > 1) such that a(k,n+1) - a(k,n) is also a perfect power, or 0 if no such perfect power exists.
 
 This project examines properties of the function a(k,i) for fixed k.
 
@@ -79,3 +79,27 @@ Similarly, for any positive integer k, are there infinite i such that a(k,i+1) -
 ### Question 4
 
 If not, for any positive integer k, are there at least exist infinite i such that a(k,i+1) - a(k,i) < either (a(k,i)^2 - 1)^2 / 4 or (a(k,i)^2 / 4 - 1)^2 depending on if a(k,i) is odd or even respectively?
+
+## Other considerations
+
+### 1 as a perfect power
+
+Many definitions of perfect powers stipulate that the base m must be greater than 1, excluding 1 as a perfect power. If this is done, then holding aside all a(0) which are one less than a perfect power, the only part of any sequencex that may be affected is a(i) = 8 and a(i+1) = 9, as Catalan's conjecture, proved by Mihailescu in 2002, conclusively shows that that is the only time two perfect powers differ by 1.
+
+Even then, the sequence goes 8 => 16 => 25 => ..., which follows what would instead be 8 => 9 => 25 => ... if 1 were allowed, meaning nothing is fundamentally changed there.
+
+More work needs to be done to see if a(0) being 1 less than a perfect power is significantly affected by disallowing 1 from the set of perfect powers.
+
+### Set-valued function
+
+Refer to findSuccessivePowerSets.m for the corresponding script.
+
+If instead a(k,0) = {k} and a(k,n+1) is the set of all perfect powers m^b such that the difference between m^b and some element of a(k,n) is also a perfect power, then we get a much larger amount of numbers.
+
+It is possible to order the set of positive numbers that appear in some a(k,i), and evidently all members of the sequence of a(k,i) under the old definition appear too. This means that we can connect together numbers by whether they generate coincidental numbers at some point (whether this forms an equivalence relation like with the old definition is yet to be seen.)
+
+In other words, we can connect together numbers x and y if there are some perfect powers p_{1}, p_{2}, ... and q_{1}, q_{2}, ... such that x + p_{1} + p_{2} + ... = y + q_{1} + q_{2} + ... with each x + p_{1}, x + p_{1} + p_{2}, ..., and y + q_{1}, y + q_{1} + q_{2}, ... being perfect powers.
+
+With this grouping, some groups previously apparently or possibly disjoint under the old definition are connected together. The 10-group for example satisfies 10 + 3^7 = 13^3 = 1 + 2^3 + 3^3 + 2^6 + 24^2 + 39^2. The 38-group satisfies 38 + 11^3 = 37^2 = 1 + 2^3 + 3^3 + 2^6 + 3^5 + 13^2 + 2^6 + 18^2 + 10^2 + 15^2 + 12^2.
+
+Of the listed groups, it is still unknown if any elements of the 30-group, 146-group, and 150-group are connected to any elements of the 1-group.
