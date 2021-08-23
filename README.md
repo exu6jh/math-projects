@@ -17,5 +17,7 @@ Shortname: CSoQR
 
 Area: number theory
 
-Covering systems are sets of ordered pairs (a_i, n_i) such that every integer is congruent to some a_i modulo n_i. A number q is a quadratic residue of a modulus n if q is congruent to some perfect square modulo n.
-This project examines whether there exists some covering system composed solely of (a_i, n_i) such that a_i is a quadratic residue of n_i.
+Covering systems are finite sets of ordered pairs (a_i, n_i) such that every integer is congruent to some a_i modulo n_i. A number q is a quadratic residue of a modulus n if q is congruent to some perfect square modulo n.
+This project examines whether there exists some covering system composed solely of (a_i, n_i) such that a_i is a quadratic residue of n_i. More info can be found in the folder itself.
+
+The core problem of this project has been SOLVED.
