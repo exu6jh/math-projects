@@ -41,3 +41,5 @@ This collection of congruences is a collection of congruences where each n_i are
 This number, in satisfying every congruence representing a quadratic nonresidue, and in avoiding whichever pair (0, 2) or (1, 2) we have forbidden, thus must not be covered by the system.
 
 This means that for any potential covering system of quadratic residues with primes we choose, there must be some number which isn't covered. We conclude that no such covering system may exist.
+
+Also note that another similar question, whether there are any covering systems of quadratic nonresidues, is conclusively false. Consider 1. 1 is always congruent to 1 (mod n) regardless of the choice of n. 1 is also always a quadratic residue of n, since 1^2 = 1 is congruent to 1 (mod n). This means that since 1 (mod n) is never a congruence with a quadratic nonresidue, and 1 must be of the form 1 (mod n), no covering system of quadratic nonresidues covers it.

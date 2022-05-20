@@ -3,8 +3,8 @@ clc;
 
 largestNumber = 40;
 
-allNumbers = find(zeros(1,largestNumber - 2) == 0) + 2;
-residues = generateResidues(allNumbers);
+allNumbers = find(zeros(1,largestNumber) == 0);
+residues = generateResidues(allNumbers, true);
 [cover,exampleWrong,mult] = isCoveringSystem(residues);
 disp(cover);
 disp(exampleWrong);
